@@ -118,9 +118,35 @@ instalaciju Appium poslužitelja:
 > 4. Ubacite Appium i TestNG biblioteke u novi projekt (pom.xml) uz odabir enable auto-import opcije. 
 > 5. Ukoliko želite automatski stvoriti izvješća o izvršenim testovima koristite i maven-surefire-plugin.
 > 5. Kreirajte novu testnu klasu za testiranje Android aplikacije gdje će biti izvršeni testovi. 
-> 6. Za testiranje aplikacije koja je korištena u ovom primjeru potreban kod možete pronaći u <>. 
+> 6. Za testiranje aplikacije koja je korištena u ovom primjeru potreban kod možete pronaći u <https://github.com/igor1797/Testiranje-Android-aplikacije-/tree/master/Testiranje>. 
 > 7. Pokrenite test desnim klikom na naziv klase te odaberite opciju "Run" za pokretanje testa. 
 > 8. Nakon toga otvara se emulator gdje se izvršavaju testovi koji su napisani i prikazuju se. 
 > 9. Nakon završetka testa ispisuje se koliko je testova prošlo ili palo.
+
+---
+---
+
+## Opis tesiranja samostalne napravljene aplikacije "Factory news reader".
+
+Aplikacija dohvaća vijesti sa Rest Api-a te ih prikazuje. Klikom na jednu od vijesti se otvara drugi
+Activity te se prikazuje detaljniji opis kliknute vijesti. Swipe-om lijevo ili u desno se mijenjaju vijesti.
+Vijesti se ažuriraju svakih 5 minuta pa je potrebno paziti koje se vijesti trenutno prikazuju i zbog toga
+je potrebno ažurirati i u testu naslov vijesti.
+
+>Test radi sljedeće:
+>> 1. Otvara aplikaciju Factory news reader.
+>> 2. Klikne na naslov prvih vijesti.
+>> 3. Otvara prve vijesti.
+>> 4. Provjeri je li naslov vijesti dobar.
+>> 5. Klikne na gumb za povratak na popis vijesti.
+>> 7. Klikne na sliku drugih vijesti.
+>> 8. Provjeri je li naslov vijesti dobar.
+>> 9. Swipe-a na treću vijest.
+>> 10. Provjeri je li naslov swipe-anih vijesti dobar.
+>> 11. Klikne na gumb za povratak na popis vijesti.
+>> 12. Zatvori aplikaciju.
+
+---
+---
 
 
