@@ -12,7 +12,11 @@ vrsti uređaja, ne ovisi o vrsti operacijskog sustava.
 Appium podržava sve jezike koji imaju klijentske biblioteke Selenium kao što su Java, Objective C,
 JavaScript s node.js, PHP, Ruby, Python, C # itd.
 
-* Praćenjem navedenih koraka možete pratiti postupak testiranja Android aplikacije pomoću Appium testa.
+---
+
+**Praćenjem navedenih koraka možete pratiti postupak testiranja Android aplikacije pomoću Appium testa.**
+
+---
 
 ## 1. Instalacija Android Studio razvojnog alata
 
@@ -50,7 +54,7 @@ Ukoliko imate problema s instalacijom Android Studio razvojnog alata pratite upu
 > 	1. Idite na Tools>AVD Manager>Run ako je emulator kreiran.
 > 	2. Ako emulator nije kreiran onda je potrebno kreirati emulator.
 >
-> * Pokretanje emulatora iz naredbenog redka
+> * Pokretanje emulatora iz naredbenog retka
 > 	1. Otvorite "Naredbeni redak".
 > 	2. Prebacite se na putanju do "emulator" pomoću naredbe 'cd'. Primjer naredbe: cd C:\Users\Korisnik\AppData\Local\Android\Sdk\emulator.
 > 	3. Pokrenite 'emulator -avd -list-avds' naredbu kako bi ste dobili ispis postojećih emulatora.
@@ -71,5 +75,52 @@ Ukoliko imate problema s instalacijom Android Studio razvojnog alata pratite upu
 Odaberite sami jednu od tri ponuđene opcije za pokretanje emulatora.
 
 ## 6. Pokretanje testne aplikacije na emulatoru
+
+> 1. Otvorite "Naredbeni redak".
+> 2. Prebacite se na putanju do "platform-tools" pomoću naredbe 'cd'. Primjer naredbe: cd C:\Users\Student\AppData\Local\Android\Sdk\platform-tools.
+> 3. Pritisnite enter.
+> 4. Pokrenite 'adb -s id_emulatora install putanja_do_apk' naredbu kako bi instalirali aplikaciju, na emulator, koju želite testirati. Primjer naredbe: adb -s emulator-5554 install C:\Users\Korisnik\Documents\Apk\apk-debug.apk
+> 5. Pokrenite 'adb start-server' naredbu koja će pokrenut ADB poslužitelj koji će Appium upotrebljavati za slanje naredbi na vaš Android uređaj.
+
+## 7. Instalacija, postavljanje i pokretanje Appium alata za testiranje
+
+Appium je "HTTP poslužitelj" napisan koristeći Node.js platformu i pogoni iOS i Android sesiju
+pomoću Webdriver JSON mrežnog protokola. Stoga, prije nego što se Appium poslužitelj instalira i
+pokrene, potrebno je instalirati Node.js platformu.
+
+Provjerite da li je Node.js platforma instalirana na vaš sustav tako da pokrenete naredbu 'node -v' u naredbenom retku.
+Ako nije, preuzmite Node.js instalaciju na sljedećoj poveznici: <https://nodejs.org/en/download/>
+
+Ako je Node.js platforma instalirana (node -v naredba ispisuje verziju na ekranu), možete započeti
+instalaciju Appium poslužitelja:
+
+> 1. Idite na <http://appium.io/> i kliknite "Preuzmi Appium".
+> 2. Za Windows sustave odaberite *.exe datoteku i preuzmite ju.
+> 3. Pokrenite Appium Desktop.
+> 4. Podesite konfiguraciju za ANDROID_HOME i JAVA_HOME varijable. Za ANDROID_HOME unesite putanju do "sdk" mape, a za JAVA_HOME unesite putanju do "bin" mape.
+> 5. Vidjet ćete prozor poslužitelja sa Pokreni tipkom. On popunjava zadanu "host" i "port" opciju koju možete promijeniti (ostavite predefinirane postavke).
+> 6. Kada kliknete gumb Pokreni poslužitelj, novi poslužitelj pokreće se na zadanoj host adresi i portu. Prikazuje se izlazni dnevnik (eng. log) poslužitelja.
+> 7. Možete unijeti željene sposobnosti mobilnog uređaja i započeti sesiju. 
+>  Primjer:
+>  {
+>  "app": "D:\\Student\\MTTPP\app-debug.apk",
+>  "VERSION": "9.0",
+>  "deviceName": "emulator",
+>  "platformName": "Android"
+>  }
+> 8. Sada ste spremni pregledavati svojstva elemenata zadane aplikacije na vašem mobilnom uređaju ili emulatoru.
+
+## 8. Instalacija, postavljanje i pokretanje Intellij razvojnog alata
+
+> 1. Preuzmite IntelliJ razvojni alat. Idite na <https://www.jetbrains.com/idea/download/> i skinite ga.
+> 2. Instalirajte Intellij. 
+> 3. Nakon uspješne instalacije pokrenite Intellij te stvorite novi Maven projekt odabirom File>New>Project>Maven. 
+> 4. Ubacite Appium i TestNG biblioteke u novi projekt (pom.xml) uz odabir enable auto-import opcije. 
+> 5. Ukoliko želite automatski stvoriti izvješća o izvršenim testovima koristite i maven-surefire-plugin.
+> 5. Kreirajte novu testnu klasu za testiranje Android aplikacije gdje će biti izvršeni testovi. 
+> 6. Za testiranje aplikacije koja je korištena u ovom primjeru potreban kod možete pronaći u <>. 
+> 7. Pokrenite test desnim klikom na naziv klase te odaberite opciju "Run" za pokretanje testa. 
+> 8. Nakon toga otvara se emulator gdje se izvršavaju testovi koji su napisani i prikazuju se. 
+> 9. Nakon završetka testa ispisuje se koliko je testova prošlo ili palo.
 
 
