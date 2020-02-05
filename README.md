@@ -80,7 +80,7 @@ Odaberite sami jednu od tri ponuđene opcije za pokretanje emulatora.
 > 3. Desni klik miša unutar mape gdje želite klonirati i odaberite 'Git Bash Here'.
 > 4. Klonirajte repozitorij na lokalno računalo pomoću naredbe 'git clone https://github.com/igor1797/Testiranje-Android-aplikacije-.git' i pritisnite Enter.
 
-## 6. Pokretanje testne aplikacije na emulatoru
+## 7. Pokretanje testne aplikacije na emulatoru
 
 > 1. Otvorite "Naredbeni redak".
 > 2. Prebacite se na putanju do "platform-tools" pomoću naredbe 'cd'. Primjer naredbe: cd C:\Users\Student\AppData\Local\Android\Sdk\platform-tools.
@@ -88,7 +88,7 @@ Odaberite sami jednu od tri ponuđene opcije za pokretanje emulatora.
 > 4. Pokrenite 'adb -s id_emulatora install putanja_do_apk' naredbu kako bi instalirali aplikaciju (aplikacija je unutar mape APK <https://github.com/igor1797/Testiranje-Android-aplikacije-/tree/master/APK>), na emulator, koju želite testirati. Primjer naredbe: adb -s emulator-5554 install C:\Users\Korisnik\Documents\Apk\apk-debug.apk
 > 5. Pokrenite 'adb start-server' naredbu koja će pokrenut ADB poslužitelj koji će Appium upotrebljavati za slanje naredbi na vaš Android uređaj.
 
-## 7. Instalacija, postavljanje i pokretanje Appium alata za testiranje
+## 8. Instalacija, postavljanje i pokretanje Appium alata za testiranje
 
 Appium je "HTTP poslužitelj" napisan koristeći Node.js platformu i pogoni iOS i Android sesiju
 pomoću Webdriver JSON mrežnog protokola. Stoga, prije nego što se Appium poslužitelj instalira i
@@ -120,20 +120,20 @@ instalaciju Appium poslužitelja:
 > 8. Ako u ovom trenutku imate upaljen emulator i instaliranu aplikaciju za testiranje pokrenite sesiju.
 > 9. Sada ste spremni pregledavati svojstva elemenata zadane aplikacije na vašem mobilnom uređaju ili emulatoru.
 
-## 8. Instalacija, postavljanje i pokretanje Intellij razvojnog alata
+## 9. Instalacija, postavljanje i pokretanje Intellij razvojnog alata
 
 > 1. Preuzmite IntelliJ razvojni alat. Idite na <https://www.jetbrains.com/idea/download/> i skinite ga.
 > 2. Instalirajte Intellij. 
 > 3. Nakon uspješne instalacije otvorite Intellij.
 > 4. Idite na File>Open te otvorite mapu Testiranje <https://github.com/igor1797/Testiranje-Android-aplikacije-/tree/master/Testiranje>.
 
-## 9. Pokretanje testova
+## 10. Pokretanje testova
 > 1. U ovom trenutku trebate imati pokrenutu sesiju, pokrenut emulator na kojem je instalirana aplikacija za testiranje i otvoren projekt u Intellij-u.
 > 2. Desni klik miša na paket (engl. package) 'tests' i odaberite Run 'Tests in "test"'.
 > 3. Nakon uspješnog pokretanja testa otvara se emulator te pokreću napisani testovi.  
 
-## 10. Rezultat
-![Testovi](https://imgur.com/l7z2pYN.jpg)
+## 11. Rezultat
+![Testovi](https://imgur.com/M38XSZQ.jpg)
 
 ---
 ---
