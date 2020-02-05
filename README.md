@@ -133,7 +133,8 @@ instalaciju Appium poslužitelja:
 > 3. Nakon uspješnog pokretanja testa otvara se emulator te pokreću napisani testovi.  
 
 ## 10. Rezultat
-![](https://imgur.com/l7z2pYN.jbg)
+![Testovi](https://imgur.com/l7z2pYN)
+
 ---
 ---
 
